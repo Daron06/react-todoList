@@ -1,9 +1,11 @@
 import React from 'react';
+import db from './assets/db.json';
 
+// component
 import List from './component/List/List';
+import AddButtonList from './component/AddButtonList/AddButtonList';
 
 function App() {
-  const [state, setState] = useState(initialState);
   return (
     <div className="todo">
       <div className="todo__sidebar">
@@ -42,44 +44,12 @@ function App() {
             },
             {
               color: 'pink',
-              name: 'Фильмы и сериалы',
-              active: true
+              name: 'Фильмы и сериалы'
             }
           ]}
           isRemovable
         />
-        <List
-          items={[
-            {
-              className: 'list__add-button',
-              icon: (
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 1V11"
-                    stroke="#868686"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M1 6H11"
-                    stroke="#868686"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ),
-              name: 'Добавить список'
-            }
-          ]}
-        />
+        <AddButtonList colors={db.colors} />
       </div>
     </div>
   );

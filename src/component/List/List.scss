@@ -8,6 +8,11 @@
     }
   }
 
+  .badge {
+    position: relative;
+    left: 5px;
+  }
+
   li {
     display: flex;
     align-items: center;
@@ -27,26 +32,6 @@
     display: inline-flex;
     img {
       opacity: 0.6;
-    }
-  }
-
-  .badge {
-    width: 10px;
-    height: 10px;
-    border-radius: 30px;
-    position: relative;
-    left: 5px;
-
-    &--green {
-      background-color: #428883;
-    }
-
-    &--blue {
-      background-color: #64c4ed;
-    }
-
-    &--pink {
-      background-color: #ffbbcc;
     }
   }
 }

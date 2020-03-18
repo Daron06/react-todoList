@@ -26,9 +26,34 @@ body {
   border-right: 1px solid #f1f1f1;
   &__sidebar {
     background-color: #f4f6f8;
-    width: 220px;
+    width: 235px;
     height: 100%;
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
+  }
+}
+.field {
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  padding: 8px 12px;
+
+  &:focus {
+    border-color: #bdbdbd;
+  }
+}
+.btn {
+  background-color: #4dd599;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#4dd599, 6%);
+  }
+  &:active {
+    background-color: darken(#4dd599, 10%);
   }
 }
